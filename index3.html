@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+            $("button").click(function(){
+                var b_back = $(this).text();
+                console.log(b_back);
+                $("body").animate({"background-color": b_back},500);
+            })
+            $(".list li").click(function(){
+                var bg = $(this).attr("bg");
+                $("body").animate({"background-color": bg},500);
+            })
+            $("p").hover(function(){
+                var h_title2 = $(this).attr("title2");
+                $(this).text(h_title2)
+            },function(){
+                var h_title1 = $(this).attr("title1");
+                $(this).text(h_title1)
+            })
+        }) /* js_end */
+    </script>
+</head>
+<body>
+    <button>red</button>
+    <button>yellow</button>
+    <button>green</button>
+    <button>blue</button>
+    <button>purple</button>
+
+    <ul class="list">
+        <li bg="red">빨강</li>
+        <li bg="yellow">노랑</li>
+        <li bg="blue">파랑</li>
+        <li bg="green">초록</li>
+        <li bg="purple">보라</li>
+    </ul>
+
+    <p title1="이찬형" title2="leechanhyeong">이찬형</p>
+    <p title1="김찬형" title2="kimchanhyeong">김찬형</p>
+    <p title1="박찬형" title2="parkchanhyeong">박찬형</p>
+    <p title1="정찬형" title2="jungchanhyeong">정찬형</p>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script lang="java">
+        $(function(){
+
+
+            /* $("v.iew li").hide;
+            $("v.iew li").eq(0).show(); */
+
+            /* $("v.iew li").hide;
+            $("v.iew li:nth-child(1)").show(); */
+
+
+            $(".view li").eq(0).siblings().hide();
+
+            $(".btn li").click(function(){
+
+                var n = $(this).index();
+                console.log("n :",n);
+
+
+                $(".view li").slideUp();
+                $(".view li").eq(n).slideDown(100);
+
+
+                $(".btn li").removeClass("on");
+                $(this).addClass("on");
+            })/* click btn */
+
+
+            
+        })/* js_end */
+    </script>
+    
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li,
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            background-color: cadetblue;
+
+        }
+
+        h1 {
+            padding: 10px 0;
+            width: 500px;
+            border-bottom: 3px double rgb(79, 50, 207);
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .wrap {
+            width: 600px;
+            height: 400px;
+            margin: 50px auto;
+            border: 20px groove white;
+            position: relative;
+        }
+
+
+        .view {
+            position: relative
+        }
+
+        .view li {
+            position: absolute;
+            width: 600px;
+            height: 400px;
+        }
+
+        .view li a {}
+
+        .view li a img {}
+
+        .btn {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn li {
+            display: inline-block;
+        }
+
+        .btn li a {
+            text-indent: -9999px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(99, 97, 94);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .btn li a:hover {
+            background-color: aliceblue;
+        }
+
+        .on a {
+            width: 50px !important;
+            background-color: aqua;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>index eq number</h1>
+    <div class="wrap">
+        <ul class="view">
+            <li><a href="#"><img src="img/animal05.png" alt="a1"></a></li>
+            <li><a href="#"><img src="img/animal06.png" alt="a2"></a></li>
+            <li><a href="#"><img src="img/animal07.png" alt="a3"></a></li>
+            <li><a href="#"><img src="img/animal08.png" alt="a4"></a></li>
+            <li><a href="#"><img src="img/animal09.png" alt="a5"></a></li>
+        </ul> <!-- view -->
+        <ul class="btn">
+            <li class="on"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+        </ul>
+    </div> <!-- wrap -->
+</body>
+
+</html>

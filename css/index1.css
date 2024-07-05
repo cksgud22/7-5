@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li,
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    /* background-color: #444; */
+}
+
+
+/* inline */
+h1 {
+    text-align: center;
+    */ margin-top: 50px;
+}
+
+
+.list {
+    /* border: 1px solid black; */
+    margin: 100px 0;
+    text-align: center;
+}
+
+.list li {
+    /* border: 1px solid rgb(245, 23, 23); */
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    margin: 0 20px;
+}
+
+.list li a {
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 50px;
+    display: block;
+    height: 50px;
+    background-color: chartreuse;
+}
+
+/* float */
+.list1 {
+    /* border: 1px solid rgb(245, 23, 23); */
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.list1 li {
+    float: left;
+    /* border: 1px solid black; */
+
+}
+
+.list1 li a {
+    text-align: center;
+    width: 200px;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    background-color: aquamarine;
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.txt {
+    font-weight: bold;
+    text-shadow: 0 0 5px red;
+    font-size: 20px;
+}
+
+/* flex */
+.list2 {
+    margin-top: 100px;
+    border: 1px solid rgb(0, 0, 0);
+    display: flex;
+    /* flex-direction: row;  default 값*/
+    /* flex-direction: column; 위아래방향*/
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    height: 150px;
+    align-items: flex-end;
+    /* justify-content: a; */
+}
+
+.list2 li {
+    /* border: 1px solid yellow; */
+    height: 80px;
+}
+
+.list2 li a {
+    height: 100%;
+    display: block;
+    /* width: 200px;  */
+    padding: 10px 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: rgb(219, 127, 255);
+}
+.box_over{
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px gray;
+}
+/* grid */
+.list3 {
+    /* border: 1px solid yellow; */
+    margin: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    text-align: center;
+}
+
+.list3 li {
+    /* border: 1px solid yellowgreen; */
+    margin: 0 auto;
+}
+
+.list3 li a {
+    display: block;
+    background-color: #444;
+    color: white;
+    border-radius: 20px;
+    padding: 20px 30px;
+    
+}
+
+.grid_b{
+    background-color: #c0a1a1 !important;
+    /* color: aliceblue; */
+    box-shadow: 0 0 5px yellow;
+    border-radius: 30px !important;
+}
+.grid_t{
+    color: black !important;
+    /* color: aliceblue; */
+    text-shadow: 0 0 2px white;
+    
+}
